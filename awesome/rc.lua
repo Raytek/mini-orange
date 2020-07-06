@@ -73,6 +73,7 @@ editor_cmd = terminal .. " -e " .. editor
 -- I suggest you to remap Mod4 to another key using xmodmap or other tools.
 -- However, you can use another modifier like Mod1, but it may interact with others.
 modkey = "Mod4"
+altkey = "Mod1"
 
 -- Table of layouts to cover with awful.layout.inc, order matters.
 awful.layout.layouts = {
@@ -315,7 +316,7 @@ globalkeys = gears.table.join(
     -- Standard program
     awful.key({ modkey,           }, "Return", function () awful.spawn(terminal) end,
               {description = "open a terminal", group = "launcher"}),
-    awful.key({ "Control", "Shift" }, "l", function() awful.spawn(lock) end,
+    awful.key({ "Control", altkey }, "l", function() awful.spawn(lock) end,
               {description = "lock the screen", group = "launcher"}),
     awful.key({ }, "Print", function() awful.spawn(pscreen) end,
               {description = "print-screen tool", group = "launcher"}),
@@ -621,7 +622,7 @@ autorun = true
 autorunApps = 
 { 
    "picom",
-   "xmodmap -e \"pointer = 3 2 1\"",
+   "xmodmap -e \"pointer = 1 2 3\"",
 }
 if autorun then
    for app = 1, #autorunApps do
