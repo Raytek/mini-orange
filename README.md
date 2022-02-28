@@ -7,7 +7,7 @@ A minimal awesome theme.
 # Tips and Tricks
 - `bc -l` for calculator
 - `cal -y` for calendar
-- Look to my dotfiles and change what you want ;)
+- Look to my dotfiles and change whatever you want ;)
 - Enjoy it!
 
 # Credits
